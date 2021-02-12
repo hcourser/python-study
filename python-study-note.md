@@ -165,3 +165,5 @@ defaultdict(list, {'a': ['apple', 'atom'], 'b': ['bat', 'bar', 'book']})
 |a.difference(b)|a-b|在a不在b的元素|
 |a.difference_update(b)|a-=b|将a的内容设置为在a不在b的元素|
 |a.symmetric_difference(b)|a^b|所有在a或b中，但不是同时在a和b中的元素|
+|a.symmetric_difference_update(b)|a^=b|将a的内容设置为如上|
+|a.issubset(b)|N/A|如果a包含于b，返回True|
