@@ -16,6 +16,10 @@
   - [合并字典](#合并字典)
   - [默认值](#默认值)
 - [集合](#集合)
+  - [操作](#操作)
+  - [构造](#构造)
+- [列表、集合和字典的推导式](#列表集合和字典的推导式)
+  - [基本形式](#基本形式)
 
 
 # 元组
@@ -151,6 +155,8 @@ defaultdict(list, {'a': ['apple', 'atom'], 'b': ['bat', 'bar', 'book']})
 # 集合
 集合是一种无序且***元素唯一***的容器。
 看上去也很像一个只有***Key***没有值的字典。
+所以集合的元素必须是不可变的。
+## 操作
 |函数|替代方法|描述|
 |----|----|----|
 |a.add(x)|N/A|将元素x加入集合a|
@@ -167,3 +173,27 @@ defaultdict(list, {'a': ['apple', 'atom'], 'b': ['bat', 'bar', 'book']})
 |a.symmetric_difference(b)|a^b|所有在a或b中，但不是同时在a和b中的元素|
 |a.symmetric_difference_update(b)|a^=b|将a的内容设置为如上|
 |a.issubset(b)|N/A|如果a包含于b，返回True|
+|a.isdisjoint(b)|N/A|a，b没有交集则返回True|
+## 构造
+```
+my_data=[1,2,3,3,4]
+my_set=set(my_date)
+
+输出：
+my_set
+{1,2,3,4}
+```
+# 列表、集合和字典的推导式
+它允许过滤一个容器的元素，用一种简明的表达式转换传递给过滤器的元素，从而生成一个新的列表。
+
+## 基本形式
+```
+[expr for val in collection if condition]
+```
+等价于下面
+```
+result=[]
+for val in collection:
+    if condiction:
+        result.append(expr)
+```
