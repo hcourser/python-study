@@ -19,7 +19,8 @@
   - [操作](#操作)
   - [构造](#构造)
 - [列表、集合和字典的推导式](#列表集合和字典的推导式)
-  - [基本形式](#基本形式)
+  - [基本推导式](#基本推导式)
+  - [嵌套推导式](#嵌套推导式)
 
 
 # 元组
@@ -186,7 +187,8 @@ my_set
 # 列表、集合和字典的推导式
 它允许过滤一个容器的元素，用一种简明的表达式转换传递给过滤器的元素，从而生成一个新的列表。
 
-## 基本形式
+## 基本推导式
+1. 列表推导式
 ```
 [expr for val in collection if condition]
 ```
@@ -197,3 +199,32 @@ for val in collection:
     if condiction:
         result.append(expr)
 ```
+2. 集合推导式
+只是方括号变成了大括号而已
+```
+{expr for val in collection if condition}
+```
+3. 字典推导式
+字典的expr需要一对Key:Value
+```
+{key-expr:value-expr for value in collection if condition}
+```
+## 嵌套推导式
+有如下形式的嵌套推导式：
+```
+some_tuples = [(1,2,3),(4,5,6),(7,8,9)]
+flattened = [x for tup in some_tuples for x in tup if x>2]
+
+输出：
+flattened
+[3, 4, 5, 6, 7, 8, 9]
+```
+其实，它的原本形式是：
+```
+flattened = []
+for tup in some_tuples:
+    for x in tup:
+        if x>2:
+            flattened.append(x)
+```
+注意它的对应关系！
