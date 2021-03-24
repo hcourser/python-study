@@ -40,3 +40,5 @@ $\sin x=\cos x*\tan x$
 $\cos x=\sin x*\cot x$
 
 $\tan x=\sin x*\sec x$
+
+
