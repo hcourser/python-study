@@ -5,9 +5,7 @@
 
 ## 和差化积公式2
 
-$$
-\sin\alpha+\cos\beta=2\sin\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}
-$$
+$\sin\alpha+\cos\beta=2\sin\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}$
 
 笑 + 笑 = 笑痛了哭
 ***
